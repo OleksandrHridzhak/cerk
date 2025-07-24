@@ -1,11 +1,22 @@
+'use client'
 import React from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import BurgerMenu from './BurgerMenu'
 import SearchBtn from './SearchBtn'
+import SlideMenu from './SlideMenu'
+
+
+
 
 const Header: React.FC = ({}) => {
+  const [isOpen, setOpen] = useState(false);
+
+
   return (
-    <header className='flex bg-light-c w-full  items-center h-17 border-b xl:border-b-[1.5px] border-b-gray-c'>
+    <>
+    <SlideMenu isOpen={isOpen} onClose={()=> setOpen(!isOpen)} />
+    <header className='flex relative z-10 bg-light-c w-full  items-center h-17 border-b xl:border-b-[1.5px] border-b-gray-c'>
       <div className='flex justify-between w-full px-5 md:px-7 mx-auto max-w-screen-xl  items-center'>
         <Link href="/" className="font-bold text-2xl md:text-3xl">
             cerk
@@ -25,12 +36,12 @@ const Header: React.FC = ({}) => {
                     </li>
                 </ul>
             </nav>
-
             <SearchBtn />
-            <BurgerMenu/>
+            <BurgerMenu onClick={()=> setOpen(!isOpen)} isOpen={isOpen}/>
         </div>
       </div>
     </header>
+    </>
   )
 }
 
