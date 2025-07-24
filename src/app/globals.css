@@ -7,6 +7,12 @@
 .text-gray-c{
   color:#0F172A;
 }
+.bg-gray-c{
+  background-color:#0F172A;
+}
+.border-b-gray-c{
+  border-color:#0F172A;
+}
 .bg-light-c{
   background-color: #F1F2EC;
 }

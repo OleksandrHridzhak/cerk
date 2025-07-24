@@ -5,7 +5,7 @@ import SearchBtn from './SearchBtn'
 
 const Header: React.FC = ({}) => {
   return (
-    <header className='flex bg-light-c w-full justify-between items-center px-4 h-15'>
+    <header className='flex bg-light-c w-full justify-between items-center px-4 h-15 border-b border-gray-c'>
         <Link href="/" className="font-bold text-xl">
             cerk
         </Link>

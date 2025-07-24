@@ -18,10 +18,11 @@ const SearchBtn: React.FC<SearchBtnProps> = ({ onClick, ariaLabel = 'Search' }) 
             display: 'flex',
             alignItems: 'center',
         }}
+        className="text-gray-c hover:text-gray-800 transition-colors duration-200"
     >
         <svg
-            width="20"
-            height="20"
+            width="23"
+            height="23"
             viewBox="0 0 20 20"
             fill="none"
             aria-hidden="true"
