@@ -21,7 +21,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ onToggle }) => {
     <button
       aria-label={open ? 'Close menu' : 'Open menu'}
       onClick={handleToggle}
-      className="flex flex-col items-center justify-center w-11 h-11 p-0 bg-transparent border-0 cursor-pointer"
+      className="flex flex-col items-center justify-center w-11 h-11 p-0 bg-transparent border-0 cursor-pointer xl:hidden"
 
       type="button"
     >
