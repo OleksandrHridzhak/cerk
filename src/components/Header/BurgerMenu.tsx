@@ -21,23 +21,23 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ onToggle }) => {
     <button
       aria-label={open ? 'Close menu' : 'Open menu'}
       onClick={handleToggle}
-      className="flex flex-col items-center w-8 h-5 gap-[4px] p-0 bg-transparent border-0 cursor-pointer"
+      className="flex flex-col items-center justify-center w-11 h-11 p-0 bg-transparent border-0 cursor-pointer"
+
       type="button"
     >
       <span
-        className={`block  h-[3px] w-[18px] ml-auto bg-gray-800 rounded transition-transform duration-300 ease-in-out origin-left ${
-          open ? 'rotate-45 translate-x-[6px] translate-y-[6px]' : ''
+        className={`block  h-[3px] ml-auto mb-[5px] bg-gray-c rounded transition-all duration-300 ease-in-out origin-left ${
+          open ? 'w-[29px]' : 'w-[25px]'
         }`}
       />
       <span
-        className={`block h-[3px] w-[24px] ml-auto rounded bg-gray-800 transition-opacity duration-300 ease-in-out ${
-          open ? 'opacity-0' : 'opacity-100'
+        className={`block h-[3px] ml-auto rounded mb-[5px] bg-gray-c transition-all duration-300 ease-in-out ${
+          open ? 'w-[18px]' : 'w-[34px]'
         }`}
-        style={{ width: '24px' }}
       />
       <span
-        className={`block h-[3px] w-[13px] ml-auto bg-gray-800 rounded transition-transform duration-300 ease-in-out origin-left ${
-          open ? '-rotate-45 translate-x-[6px] -translate-y-[6px]' : ''
+        className={`block h-[3px] ml-auto bg-gray-c rounded transition-all duration-300 ease-in-out origin-left ${
+          open ? 'w-[25px]' : 'w-[20px]'
         }`}
       />
     </button>
