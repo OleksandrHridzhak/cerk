@@ -1,38 +1,60 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import Link from 'next/link'
 import { X } from 'lucide-react'
 
-const menuItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-]
 
 interface SlideMenuProps {
   isOpen: boolean
   onClose?: () => void
+  menuItems?: { label: string; href: string }[]
 }
 
-const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, onClose }) => {
+const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, onClose, menuItems = [] }) => {
   const styles = useSpring({
     transform: isOpen ? 'translateY(0%)' : 'translateY(-100%)',
     opacity: isOpen ? 1 : 0,
     config: { tension: 250, friction: 30 },
   })
+  const firstLinkRef = useRef<HTMLAnchorElement>(null)
+
+  // Focus the first link when the menu opens
+  useEffect(() => {
+  if (isOpen && firstLinkRef.current) {
+    firstLinkRef.current.focus()
+  }
+  }, [isOpen])
+
+  // Close the menu when the Escape key is pressed
+  useEffect(() => {
+  function handleEsc(e: KeyboardEvent) {
+    if (e.key === 'Escape' && isOpen) {
+      onClose && onClose()
+    }
+  }
+  window.addEventListener('keydown', handleEsc)
+  return () => window.removeEventListener('keydown', handleEsc)
+  }, [isOpen, onClose])
+
 
   return (
     <animated.div
+      role="dialog"            
+      aria-modal="true"           
+      aria-hidden={!isOpen}        
       style={styles}
+      id="mobile-menu"
       className="fixed top-10 z-6 w-full h-full bg-light-c flex flex-col p-6 items-center justify-center"
     >
-      <nav>
+      <nav aria-label="Main menu">  {/* описуємо меню */}
         <ul className="list-none flex flex-col justify-center mt-30 gap-14 p-0 m-0">
-          {menuItems.map((item) => (
+          {menuItems.map((item, i) => (
             <li key={item.href} className="flex justify-center">
               <Link
                 href={item.href}
+                ref={i === 0 ? firstLinkRef : undefined}
+                tabIndex={isOpen ? 0 : -1}
                 className="no-underline text-gray-800 text-3xl font-bold hover:text-blue-600 transition-colors"
               >
                 {item.label}
@@ -49,6 +71,7 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, onClose }) => {
         <X size={60} strokeWidth={2} />
       </button>
     </animated.div>
+
   )
 }
 
