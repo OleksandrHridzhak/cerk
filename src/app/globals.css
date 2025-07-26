@@ -5,17 +5,35 @@
   --foreground: #171717;
 }
 .text-gray-c{
-  color:#0F172A;
+  color:#444442;
 }
+.text-light-c{
+  color: #F1F2EC;
+}
+.border-gray-c{
+  border: 1px solid #444442;
+
+} 
 .bg-gray-c{
-  background-color:#0F172A;
+  background-color:#444442;
 }
 .border-b-gray-c{
-  border-color:#0F172A;
+  border-color:#444442;
 }
 .bg-light-c{
   background-color: #F1F2EC;
 }
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none; /* IE та Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+  }
+}
+
 
 @theme inline {
   --color-background: var(--background);
