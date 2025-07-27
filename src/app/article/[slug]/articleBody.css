@@ -1,0 +1,185 @@
+/* Base styles for mobile devices */
+.article-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0rem 1.25rem;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.125rem; /* Increased from 1rem */
+  line-height: 1.6;
+  color: #444442;
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #444442;
+}
+
+.article-body h1 {
+  font-size: 2rem; /* Increased from 1.75rem */
+  margin-top: 1.75rem; /* Increased from 1.5rem */
+  margin-bottom: 1rem; /* Increased from 0.75rem */
+}
+
+.article-body h2 {
+  font-size: 1.75rem; /* Increased from 1.5rem */
+  margin-top: 1.5rem; /* Increased from 1.25rem */
+  margin-bottom: 0.75rem; /* Increased from 0.5rem */
+}
+
+.article-body h3 {
+  font-size: 1.25rem; /* Increased from 1.125rem */
+  margin-top: 1.25rem; /* Increased from 1rem */
+  margin-bottom: 0.5rem;
+}
+
+.article-body p {
+  margin-bottom: 1.25rem; /* Increased from 1rem */
+}
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.25rem auto; /* Increased from 1rem */
+  border-radius: 8px;
+}
+
+.article-body pre {
+  background-color: #F1F2EC;
+  padding: 1rem; /* Increased from 0.75rem */
+  overflow-x: auto;
+  border-radius: 6px;
+  font-family: "DM Mono", "Menlo", "Monaco", "Courier New", monospace;
+  font-size: 0.85rem; /* Increased from 0.8rem */
+  color: #444442;
+}
+
+.article-body code {
+  background-color: #444442;
+  padding: 0.2rem 0.4rem; /* Increased from 0.1rem 0.3rem */
+  border-radius: 4px;
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem; /* Increased from 0.8rem */
+  color: #F1F2EC;
+}
+
+.article-body blockquote {
+  margin: 1.25rem 0; /* Increased from 1rem */
+  padding-left: 1rem; /* Increased from 0.75rem */
+  border-left: 4px solid #444442;
+  color: #444442;
+  font-style: italic;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 1.25rem 0; /* Increased from 1rem */
+  padding-left: 1.5rem; /* Increased from 1rem */
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+  color: #444442;
+}
+
+/* Adjustments for tablets (width ≥ 481px) */
+@media (min-width: 481px) {
+  .article-body {
+    padding: 0rem 1.5rem; /* Increased from 1rem */
+    font-size: 1.25rem; /* Increased from 1.125rem */
+  }
+
+  .article-body h1 {
+    font-size: 2.25rem; /* Increased from 2rem */
+  }
+
+  .article-body h2 {
+    font-size: 2rem; /* Increased from 1.75rem */
+  }
+
+  .article-body h3 {
+    font-size: 1.5rem; /* Increased from 1.25rem */
+  }
+
+  .article-body p {
+    margin-bottom: 1.5rem; /* Increased from 1.25rem */
+  }
+
+  .article-body img {
+    margin: 1.5rem auto; /* Increased from 1.25rem */
+  }
+
+  .article-body pre {
+    font-size: 0.9rem; /* Increased from 0.85rem */
+  }
+
+  .article-body code {
+    font-size: 0.9rem; /* Increased from 0.85rem */
+  }
+
+  .article-body blockquote {
+    margin: 1.5rem 0; /* Increased from 1.25rem */
+  }
+
+  .article-body ul,
+  .article-body ol {
+    padding-left: 2rem; /* Increased from 1.5rem */
+  }
+}
+
+/* Adjustments for desktops (width ≥ 769px) */
+@media (min-width: 769px) {
+  .article-body {
+    padding: 0rem 2rem; /* Increased from 1.5rem */
+    font-size: 1.375rem; /* Increased from 1.25rem */
+  }
+
+  .article-body h1 {
+    font-size: 2.75rem; /* Increased from 2.5rem */
+    margin-top: 2.25rem; /* Increased from 2rem */
+    margin-bottom: 1.25rem; /* Increased from 1rem */
+  }
+
+  .article-body h2 {
+    font-size: 2.25rem; /* Increased from 2rem */
+    margin-top: 1.75rem; /* Increased from 1.5rem */
+    margin-bottom: 1rem; /* Increased from 0.75rem */
+  }
+
+  .article-body h3 {
+    font-size: 1.75rem; /* Increased from 1.5rem */
+    margin-top: 1.5rem; /* Increased from 1.25rem */
+  }
+
+  .article-body p {
+    margin-bottom: 1.75rem; /* Increased from 1.5rem */
+  }
+
+  .article-body img {
+    margin: 1.75rem auto; /* Increased from 1.5rem */
+  }
+
+  .article-body pre {
+    font-size: 0.95rem; /* Increased from 0.9rem */
+    padding: 1.25rem; /* Increased from 1rem */
+  }
+
+  .article-body code {
+    font-size: 0.95rem; /* Increased from 0.9rem */
+    padding: 0.3rem 0.5rem; /* Increased from 0.2rem 0.4rem */
+  }
+
+  .article-body blockquote {
+    margin: 1.75rem 0; /* Increased from 1.5rem */
+    padding-left: 1.25rem; /* Increased from 1rem */
+  }
+
+  .article-body ul,
+  .article-body ol {
+    padding-left: 2.5rem; /* Increased from 2rem */
+  }
+}
