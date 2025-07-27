@@ -22,7 +22,7 @@ const ArticlePage = async ({ params }: Props) => {
 
   return (
     <>
-      <ArticlePhoto />
+      <ArticlePhoto src={article.image} />
       <ArticleInfo
         title={article.title}
         date={article.date}

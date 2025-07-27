@@ -1,9 +1,13 @@
 import Image from 'next/image';
 
-const ArticlePhoto: React.FC = () => {
+interface ArticlePhotoProps {
+    src: string;
+}
+
+const ArticlePhoto: React.FC<ArticlePhotoProps> = ({ src }) => {
     return (
         <Image
-            src="/ex.jpg"
+            src={src}
             alt="Article"
             width={1920}
             height={1080}
