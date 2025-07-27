@@ -2,6 +2,7 @@
 title: "My first big article for example"
 date: "21 March 2025"
 image: "/images/my-first-article/ex2.jpg"
+tags: ["Tech", "React"]
 readingTime: "6 min to read"
 ---
 

@@ -1,8 +1,9 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+
+import { useState, useEffect, useRef } from 'react';
 import { CategoryTab } from './CategoryTab';
 
-export default function CategoryNav() {
+export default function CategoryNav({ onChangeCategory }: { onChangeCategory: (cat: string) => void }) {
   const categories = ['All', 'Tech', 'Fashion', 'Sports', 'Health', 'Travel', 'Food', 'Entertainment', 'Education', 'Lifestyle'];
   const [activeIndex, setActiveIndex] = useState(0);
   const ulRef = useRef<HTMLUListElement>(null);
@@ -15,10 +16,14 @@ export default function CategoryNav() {
     }
   }, []);
 
+  useEffect(() => {
+    onChangeCategory(categories[activeIndex]);
+  }, [activeIndex]);
+
   return (
     <nav
       aria-label="Category Navigation"
-      className="max-w-5xl mx-auto  overflow-x-auto px-4"
+      className="max-w-5xl mx-auto overflow-x-auto px-4"
       style={{
         scrollbarWidth: 'none',
         msOverflowStyle: 'none',
@@ -39,7 +44,6 @@ export default function CategoryNav() {
           />
         ))}
       </ul>
-
       <style jsx>{`
         nav::-webkit-scrollbar {
           display: none;

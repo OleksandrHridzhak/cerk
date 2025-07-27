@@ -21,6 +21,7 @@ export async function getArticleBySlug(slug: string) {
       date: data.date,
       image: data.image,
       readingTime: data.readingTime,
+      tags: data.tags || [],
       contentHtml,
     };
   } catch (e) {
@@ -40,6 +41,7 @@ export async function getAllArticles() {
           date: article.date,
           image: article.image,
           readingTime: article.readingTime,
+          tags: article.tags || [],  
         };
       }
       return null;
