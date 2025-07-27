@@ -1,5 +1,5 @@
 'use client';
-import CategoryNav from './Home/CategoryNav';
+import CategoryNav from './home/CategoryNav';
 import BlogCard from '@/components/BlogCard/BlogCard';
 
 export default function Home() {
