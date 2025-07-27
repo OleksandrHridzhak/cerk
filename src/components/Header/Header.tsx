@@ -16,7 +16,7 @@ const Header: React.FC = ({}) => {
     <SlideMenu isOpen={isOpen} onClose={()=> setOpen(!isOpen)} menuItems={menuItems}/>
     <header className='flex relative z-10 bg-light-c w-full  items-center h-17 border-b xl:border-b-[1.5px] border-b-gray-c'>
       <div className='flex justify-between w-full px-5 md:px-7 mx-auto max-w-screen-xl  items-center'>
-        <Link href="/" className="font-bold text-2xl md:text-3xl">
+        <Link href="/" className="font-bold text-gray-c text-2xl md:text-3xl">
             cerk
         </Link>
         <div className='flex items-center gap-1 xl:gap-7'>
