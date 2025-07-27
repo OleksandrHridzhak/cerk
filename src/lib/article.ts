@@ -17,7 +17,6 @@ export async function getArticleBySlug(slug: string) {
     const contentHtml = marked(content);
     return {
       slug,
-
       title: data.title,
       date: data.date,
       image: data.image,
@@ -25,7 +24,27 @@ export async function getArticleBySlug(slug: string) {
       contentHtml,
     };
   } catch (e) {
-    return null; // або кидай кастомну помилку
+    return null;
   }
 }
 
+export async function getAllArticles() {
+  const slugs = getAllArticleSlugs();
+  const articles = await Promise.all(
+    slugs.map(async slug => {
+      const article = await getArticleBySlug(slug);
+      if (article) {
+        return {
+          slug: article.slug,
+          title: article.title,
+          date: article.date,
+          image: article.image,
+          readingTime: article.readingTime,
+        };
+      }
+      return null;
+    })
+  );
+  // фільтруємо null-и, щоб TS не скиглив
+  return articles.filter((a): a is NonNullable<typeof a> => a !== null);
+}
