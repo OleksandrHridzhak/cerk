@@ -10,7 +10,7 @@ It’s a **personal pet project** designed to level up my frontend skills while 
 ## ⚡ Features
 
 - ✅ Built with `create-next-app`
-- 🚀 Fully static export + GitHub Pages deployment
+- 🚀 Vercel 
 - 🧠 SEO-first approach (meta tags, OpenGraph, `itemProp`, etc.)
 - 🖼️ Lazy loading for images
 - 📱 Mobile-first responsive design
