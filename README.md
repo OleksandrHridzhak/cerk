@@ -3,7 +3,7 @@
 Welcome to my blog! This project is a modern, fast, and SEO-friendly blog built with [Next.js](https://nextjs.org), fully styled and deployed using GitHub Pages.  
 It’s a **personal pet project** designed to level up my frontend skills while learning how to create highly-optimized, production-ready sites.
 
-🌐 **Live site:** [oleksandrhridzhak.github.io/cerk](https://oleksandrhridzhak.github.io/cerk/)
+🌐 **Live site:** [https://cerk.vercel.app/](https://cerk.vercel.app/)
 
 ---
 
