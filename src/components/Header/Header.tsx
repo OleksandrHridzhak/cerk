@@ -3,7 +3,6 @@ import React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 import BurgerMenu from './BurgerMenu'
-import SearchBtn from './SearchBtn'
 import SlideMenu from './SlideMenu'
 import { menuItems } from '../../constants/menuItems'
 

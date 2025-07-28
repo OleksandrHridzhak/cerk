@@ -4,7 +4,18 @@ import { useState } from 'react';
 import CategoryNav from './CategoryNav';
 import BlogCard from '@/components/BlogCard/BlogCard';
 
-export default function ArticleList({ articles }: { articles: any[] }) {
+type Article = {
+  slug: string;
+  title: string;
+  date: string;
+  readingTime: string;
+  image: string;
+  description: string;
+  tags?: string[];
+};
+
+
+export default function ArticleList({ articles }: { articles: Article[] }) {
   const [category, setCategory] = useState('All');
 
   const filtered = category === 'All'

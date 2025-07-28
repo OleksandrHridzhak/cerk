@@ -26,6 +26,7 @@ export async function getArticleBySlug(slug: string) {
       contentHtml,
     };
   } catch (e) {
+    console.error(`Error fetching article with slug "${slug}":`, e);
     return null;
   }
 }

@@ -1,22 +1,18 @@
 import { getArticleBySlug, getAllArticleSlugs } from '@/lib/article';
 import NotFound from '@/app/not-found';
+import React from 'react';
 import ArticlePhoto from './ArticlePhoto';
 import ArticleInfo from './ArticleInfo';
 import ArticleBody from './ArticleBody';
-
-type Props = {
-  params: {
-    slug: string;
-  };
-};
 
 export async function generateStaticParams() {
   const slugs = getAllArticleSlugs();
   return slugs.map(slug => ({ slug }));
 }
 
-const ArticlePage = async ({ params }: Props) => {
-  const article = await getArticleBySlug(params.slug);
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params; // Await the params Promise
+  const article = await getArticleBySlug(slug);
   if (!article) return <NotFound />;
 
   const contentHtml = await article.contentHtml;
@@ -32,6 +28,4 @@ const ArticlePage = async ({ params }: Props) => {
       <ArticleBody content={contentHtml} />
     </>
   );
-};
-
-export default ArticlePage;
+}
