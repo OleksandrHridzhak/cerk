@@ -1,5 +1,5 @@
 import { getAllArticles } from '@/lib/article'; 
-import ArticleList from './home/ArticleList'; 
+import ArticleList from '@/app/home/ArticleList';
 
 export default async function Home() {
   const articles = await getAllArticles();

@@ -1,29 +1,29 @@
 "use client";
-import "./articleBody.css";
-import React from "react";
+import "./articleBody.css"; // Assuming you have some styles for the article body
+import React, { useEffect, useState } from "react";
 
 type Props = {
   content: string;
 };
 
 export default function ArticleBody({ content }: Props) {
+  const [html, setHtml] = useState("");
 
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(content, "text/html");
+  useEffect(() => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(content, "text/html");
 
-  doc.querySelectorAll("img").forEach(img => {
-    img.setAttribute("loading", "lazy");
-    
-  });
+    doc.querySelectorAll("img").forEach(img => {
+      img.loading = "lazy";
+    });
 
-  const processedContent = doc.body.innerHTML;
+    setHtml(doc.body.innerHTML);
+  }, [content]);
 
   return (
     <article
-      itemScope
-      itemType="http://schema.org/Article"
       className="article-body max-w-4xl mx-auto py-6 prose prose-slate dark:prose-invert"
-      dangerouslySetInnerHTML={{ __html: processedContent }}
+      dangerouslySetInnerHTML={{ __html: html }}
     />
   );
 }
