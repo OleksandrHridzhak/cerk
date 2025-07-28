@@ -14,7 +14,7 @@ export async function getArticleBySlug(slug: string) {
     const fullPath = path.join(articlesDirectory, `${slug}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    const contentHtml = marked(content);
+    const contentHtml = await marked(content);
     return {
       slug,
       title: data.title,
@@ -22,6 +22,7 @@ export async function getArticleBySlug(slug: string) {
       image: data.image,
       readingTime: data.readingTime,
       tags: data.tags || [],
+      description: data.description || "",
       contentHtml,
     };
   } catch (e) {
@@ -41,12 +42,13 @@ export async function getAllArticles() {
           date: article.date,
           image: article.image,
           readingTime: article.readingTime,
+          description: article.description || "",
           tags: article.tags || [],  
         };
       }
       return null;
     })
   );
-  // фільтруємо null-и, щоб TS не скиглив
+
   return articles.filter((a): a is NonNullable<typeof a> => a !== null);
 }

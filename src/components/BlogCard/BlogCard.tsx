@@ -8,6 +8,7 @@ type BlogCardProps = {
   date: string
   readingTime: string
   imageUrl: string
+  description: string
   href?: string
 }
 
@@ -17,11 +18,12 @@ export default function BlogCard({
   readingTime,
   imageUrl,
   href,
+  description = "A brieewff introduction to the topic, explaining its relevance and importance in the current context. This section should provide a concise overview that captures the reader's interest and sets the stage for the detailed content that follows."
 }: BlogCardProps) {
-  const Wrapper = href ? Link : 'div'
+
 
   return (
-    <Wrapper href={href ?? '#'} className="max-w-5xl mx-auto w-full rounded-2xl lg:px-8 block">
+    <Link href={href ?? '#'} className="max-w-5xl mx-auto w-full rounded-2xl lg:px-8 block">
       <div className="max-w-5xl mx-auto w-full rounded-2xl border border-gray-c p-5 sm:flex sm:items-center sm:justify-between gap-4">
         <div className="md:mt-0 sm:mr-5 mb-4 sm:mb-0 shrink-0">
           <Image
@@ -29,20 +31,21 @@ export default function BlogCard({
             alt={title}
             width={1920}
             height={1020}
+            priority={false}
+            quality={40}
             className="rounded-xl object-cover w-full h-40 sm:w-[180px] sm:h-[180px]"
           />
         </div>
         <div className="md:flex-1 flex flex-col gap-2">
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-c">{title}</h2>
           <p className="text-gray-c text-sm sm:text-base line-clamp-3 sm:line-clamp-3">
-            A brief introduction to the topic, explaining its relevance and importance in the current context.
-            This section should provide a concise overview that captures the reader's interest and sets the stage for the detailed content that follows.
+           {description}
           </p>
           <p className="mt-2 text-sm text-gray-500">
             {date} • {readingTime}
           </p>
         </div>
       </div>
-    </Wrapper>
+    </Link>
   )
 }
