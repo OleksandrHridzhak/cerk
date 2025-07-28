@@ -1,4 +1,5 @@
 import { getArticleBySlug, getAllArticleSlugs } from '@/lib/article';
+import NotFound from '@/app/not-found';
 import ArticlePhoto from './ArticlePhoto';
 import ArticleInfo from './ArticleInfo';
 import ArticleBody from './ArticleBody';
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 
 const ArticlePage = async ({ params }: Props) => {
   const article = await getArticleBySlug(params.slug);
-  if (!article) return <div>Article not found</div>;
+  if (!article) return <NotFound />;
 
   const contentHtml = await article.contentHtml;
 

@@ -4,6 +4,7 @@ date: "21 March 2025"
 image: "/images/my-first-article/ex2.jpg"
 tags: ["Tech", "React"]
 readingTime: "6 min to read"
+description: "Hello"
 ---
 
 Certainly! Here's an expanded, more detailed version of your article, incorporating richer content, engaging language, and additional sections to make it more comprehensive and captivating:
