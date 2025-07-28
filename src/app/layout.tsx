@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${dmSans.variable} ${dmSans.variable} antialiased`}
       >
       <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
