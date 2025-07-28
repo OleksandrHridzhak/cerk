@@ -1,10 +1,16 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useMemo } from 'react';
 import { CategoryTab } from './CategoryTab';
 
 export default function CategoryNav({ onChangeCategory }: { onChangeCategory: (cat: string) => void }) {
-  const categories = ['All', 'Tech', 'Fashion', 'Sports', 'Health', 'Travel', 'Food', 'Entertainment', 'Education', 'Lifestyle'];
+  
+  const categories = useMemo(
+  () => ['All', 'Tech', 'Fashion', 'Sports', 'Health', 'Travel', 'Food', 'Entertainment', 'Education', 'Lifestyle'],
+  []
+  );
+
   const [activeIndex, setActiveIndex] = useState(0);
   const ulRef = useRef<HTMLUListElement>(null);
   const [isScrollable, setIsScrollable] = useState(false);
@@ -14,11 +20,11 @@ export default function CategoryNav({ onChangeCategory }: { onChangeCategory: (c
     if (el) {
       setIsScrollable(el.scrollWidth > el.clientWidth);
     }
-  }, []);
+  }, [categories, onChangeCategory]);
 
   useEffect(() => {
     onChangeCategory(categories[activeIndex]);
-  }, [activeIndex]);
+  }, [activeIndex, categories, onChangeCategory]);
 
   return (
     <nav
@@ -38,7 +44,6 @@ export default function CategoryNav({ onChangeCategory }: { onChangeCategory: (c
           <CategoryTab
             key={category}
             label={category}
-            index={index}
             isActive={index === activeIndex}
             onClick={() => setActiveIndex(index)}
           />

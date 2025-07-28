@@ -1,5 +1,5 @@
 import { getAllArticles } from '@/lib/article'; 
-import ArticleList from '@/app/home/ArticleList';
+import ArticleList from '@/app/Home/ArticleList';
 
 export default async function Home() {
   const articles = await getAllArticles();
@@ -7,7 +7,8 @@ export default async function Home() {
   return (
     <div className="">
       <blockquote className="text-center text-gray-c text-2xl sm:text-3xl md:text-4xl md:py-3 font-bold  mx-auto my-10 px-2" >
-        “I don’t like it because<br/> it's boring”
+        “I don&apos;t like it because<br/> it&apos;s boring”
+
       </blockquote>
       <ArticleList articles={articles} />
     </div>

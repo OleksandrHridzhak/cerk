@@ -30,7 +30,9 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, onClose, menuItems = [] }
   useEffect(() => {
   function handleEsc(e: KeyboardEvent) {
     if (e.key === 'Escape' && isOpen) {
-      onClose && onClose()
+      if(onClose) {
+        onClose();
+      }
     }
   }
   window.addEventListener('keydown', handleEsc)

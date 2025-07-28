@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React  from 'react';
 
 type CategoryTabProps = {
   label: string;
   isActive: boolean;
   onClick: () => void;
-  index?: number; // Optional index prop for styling
 };
 
-export function CategoryTab({ label, isActive, onClick, index }: CategoryTabProps) {
+export function CategoryTab({ label, isActive, onClick }: CategoryTabProps) {
   return (
     <li role="presentation" className="list-none">
       <button
