@@ -56,6 +56,7 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, onClose, menuItems = [] }
               <Link
                 href={item.href}
                 ref={i === 0 ? firstLinkRef : undefined}
+                onClick={onClose}
                 tabIndex={isOpen ? 0 : -1}
                 className="no-underline text-gray-800 text-3xl font-bold hover:text-blue-600 transition-colors"
               >
