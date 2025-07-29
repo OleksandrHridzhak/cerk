@@ -5,7 +5,6 @@ It’s a **personal pet project** designed to level up my frontend skills while 
 
 🌐 **Live site:** [https://cerk.vercel.app/](https://cerk.vercel.app/)
 
-<a href="https://freetools.seobility.net/en/seocheck/check?url=https%3A%2F%2Fcerk.vercel.app%2F"><img src="https://freetools.seobility.net/widget/widget.png?url=https%3A%2F%2Fcerk.vercel.app%2F" alt="Seobility Score für cerk.vercel.app"></a>
 ---
 
 ## ⚡ Features
