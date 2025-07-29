@@ -6,15 +6,17 @@ interface ArticlePhotoProps {
 
 const ArticlePhoto: React.FC<ArticlePhotoProps> = ({ src }) => {
     return (
+        <div className="relative w-full h-[200px] md:h-[250px]">
+
         <Image
             src={src}
             alt="Article main photo"
-            width={1920}
-            height={1080}
-            priority={false}
+            fill
+            priority={true}
             quality={75}
-            className="object-cover w-full h-[200px] md:h-[250px] "
+            className="object-cover "
         />
+        </div>
     );
 };
 
