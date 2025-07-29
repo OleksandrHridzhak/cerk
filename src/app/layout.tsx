@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'KDpigy36G4cK_CqL5s_V-xsN_r8COprfhH2ekYi-_IY',
   },
+  alternates: {
+    canonical: "https://cerk.vercel.app",
+  },
 };
 
 
