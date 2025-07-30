@@ -18,6 +18,10 @@ It’s a **personal pet project** designed to level up my frontend skills while 
 
 ---
 
+
+## Figma design
+<img width="2503" height="887" alt="image" src="https://github.com/user-attachments/assets/0af632a4-0d58-43bf-800d-a27b08d75c65" />
+
 ## 🚀 Getting Started
 
 Clone the repo and run the dev server:
@@ -30,3 +34,5 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
+
