@@ -6,19 +6,18 @@ import ArticlePhoto from './ArticlePhoto';
 import ArticleInfo from './ArticleInfo';
 import ArticleBody from './ArticleBody';
 
-// Генерація статичних параметрів для SSG
+
 export async function generateStaticParams() {
   const slugs = await getAllArticleSlugs();
   return slugs.map(slug => ({ slug }));
 }
 
-// Генерація метаданих
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params; // Чекаємо params, бо це Promise
+  const { slug } = await params; 
   console.log('Slug:', slug);
 
   const baseUrl = 'https://cerk.vercel.app';
@@ -54,9 +53,8 @@ export async function generateMetadata({
   }
 }
 
-// Компонент сторінки
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params; // Чекаємо params
+  const { slug } = await params;
   const article = await getArticleBySlug(slug);
 
   if (!article) {
