@@ -183,3 +183,69 @@
     padding-left: 2.5rem; /* Increased from 2rem */
   }
 }
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.article-body th,
+.article-body td {
+  border: 1px solid #e0e0d1; /* м’який сіро-зелений */
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.article-body th {
+  background-color: #f7f7f5; /* дуже світлий, майже білий */
+  font-weight: 700;
+  color: #444442;
+}
+
+.article-body td {
+  background-color: #fcfcfa; /* світлий фон для клітинок */
+  color: #444442;
+}
+
+.article-body tr:nth-child(even) td {
+  background-color: #f4f4f2; /* трохи темніший для чергування */
+}
+
+.article-body tr:hover td {
+  background-color: #e9eadf; /* ніжний ховер */
+}
+
+@media (max-width: 480px) {
+  .article-body table,
+  .article-body thead,
+  .article-body tbody,
+  .article-body th,
+  .article-body td,
+  .article-body tr {
+    display: block;
+  }
+  
+  .article-body th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .article-body td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #e0e0d1;
+  }
+
+  .article-body td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    font-weight: 700;
+    color: #444442;
+  }
+}
