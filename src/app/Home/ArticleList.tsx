@@ -25,7 +25,7 @@ export default function ArticleList({ articles }: { articles: Article[] }) {
   return (
     <>
       <CategoryNav onChangeCategory={setCategory} />
-      <div className="max-w-6xl mx-auto flex flex-col gap-3 px-4">
+      <div className="max-w-6xl mx-auto flex flex-col gap-3 px-4 pb-5">
         {filtered.map(({ slug, title, date, readingTime, image, description }) => (
           <BlogCard
             key={slug}
