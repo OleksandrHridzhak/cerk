@@ -1,5 +1,5 @@
-const path = require('path');
-const fs = require('fs');
+import fs from 'fs';
+import path from 'path';
 
 const articlesDirectory = path.join(process.cwd(), 'content/articles');
 
@@ -7,16 +7,26 @@ function getAllArticleSlugs() {
   return fs.readdirSync(articlesDirectory).map(file => file.replace(/\.md$/, ''));
 }
 
-module.exports = {
+const nextSitemapConfig = {
   siteUrl: 'https://cerk.vercel.app',
   generateRobotsTxt: true,
   sitemapSize: 5000,
 
-  additionalPaths: async () => {
-    const slugs = getAllArticleSlugs();
-    return slugs.map(slug => ({
-      loc: `/article/${slug}`,
-      lastmod: new Date().toISOString(),
-    }));
+  transform: async (config, path) => {
+    const slugs = getAllArticleSlugs().map(slug => `/article/${slug}`);
+    const staticPages = ['/', '/about'];
+
+    if (staticPages.includes(path) || slugs.includes(path)) {
+      return {
+        loc: path,
+        lastmod: new Date().toISOString(),
+        changefreq: 'daily',
+        priority: 0.7,
+      };
+    }
+
+    return null;
   },
 };
+
+export default nextSitemapConfig;
