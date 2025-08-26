@@ -14,19 +14,20 @@ type Article = {
   tags?: string[];
 };
 
-
 export default function ArticleList({ articles }: { articles: Article[] }) {
   const [category, setCategory] = useState('All');
 
   const filtered = category === 'All'
     ? articles
-    : articles.filter((a) => a.tags?.includes(category)); 
+    : articles.filter((a) => a.tags?.includes(category));
+
+  const sorted = [...filtered].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <>
       <CategoryNav onChangeCategory={setCategory} />
       <div className="max-w-6xl mx-auto flex flex-col gap-3 px-4 pb-5">
-        {filtered.map(({ slug, title, date, readingTime, image, description }) => (
+        {sorted.map(({ slug, title, date, readingTime, image, description }) => (
           <BlogCard
             key={slug}
             title={title}
