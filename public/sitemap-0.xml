@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://cerk.vercel.app/article/11-weeks-of-writing-what-i-learned-about-diary</loc><lastmod>2025-08-26T19:55:06.805Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://cerk.vercel.app/article/my-first-post</loc><lastmod>2025-08-26T19:55:06.805Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://cerk.vercel.app/article/the-hardest-part-of-personal-projects-finding-ideas</loc><lastmod>2025-08-26T19:55:06.805Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/manifest.json</loc><lastmod>2025-08-26T20:00:30.296Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/icon1.png</loc><lastmod>2025-08-26T20:00:30.297Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/icon0.svg</loc><lastmod>2025-08-26T20:00:30.297Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/apple-icon.png</loc><lastmod>2025-08-26T20:00:30.297Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/about</loc><lastmod>2025-08-26T20:00:30.297Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app</loc><lastmod>2025-08-26T20:00:30.297Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/article/11-weeks-of-writing-what-i-learned-about-diary</loc><lastmod>2025-08-26T20:00:30.298Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/article/my-first-post</loc><lastmod>2025-08-26T20:00:30.298Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://cerk.vercel.app/article/the-hardest-part-of-personal-projects-finding-ideas</loc><lastmod>2025-08-26T20:00:30.298Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
