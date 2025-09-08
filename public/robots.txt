@@ -7,3 +7,4 @@ Host: https://cerk.vercel.app
 
 # Sitemaps
 Sitemap: https://cerk.vercel.app/sitemap.xml
+Sitemap: https://cerk.vercel.app/sitemap-0.xml
