@@ -1,7 +1,7 @@
 ---
-title: "How I Lost Control and Finally Crushed the Social Media Addiction"
+title: "Social Media 0h: How I Took Back My Life"
 date: "3 December 2025"
-image: "/images/how-i-lost-control-and-finally-crushed-social-media-addiction/main-photo2.jpg"
+image: "/images/how-i-lost-control-and-finally-crushed-social-media-addiction/graphic-of-time-on-social-en.png"
 tags: ["Social Media Detox", "Productivity", "Time Management", "Habit Change", "Behavior Design", "Personal Experiment"]
 readingTime: "15 min to read"
 description: "A candid, step-by-step reflection on how I went from 28 hours to 0 on social media, detailing relapses, strategies, and the four powerful steps that helped me regain control over my habits."
@@ -16,7 +16,7 @@ I started to feel that my energy isn’t as high as during beautiful summer days
 
 So, my brain was in the simulation when it lacked the most valuable resource: energy. I think that it is a more important resource than time. And my brain is so smart (just like yours), so it decided to take energy from alternative sources. In my case it was sugar and information consumption (YouTube, Instagram, etc.). In one week my time on social media grew to ~27h+ from my best result from the last post, where I had 4.5h. I was eating sugary things three or four times per week. I was feeling the lowest of the low. 
 
-![Hours on social media per week chart](/images/how-i-lost-control-and-finally-crushed-social-media-addiction/graphic-of-time-on-social.png)
+![Hours on social media per week chart](/images/how-i-lost-control-and-finally-crushed-social-media-addiction/graphic-of-time-on-social-en.png)
 
 
 But now I am sitting and writing it with zero in social media. So, what the fuck happened? Honestly, I can’t remember, you know, the key point, like in the films when I realized something and everything started to become awesome. I just decided to do the same things I did in my last article but changed some key things, and it was a game-changer decision. And now I have had absolutely zero for two weeks already.
