@@ -1,7 +1,7 @@
 ---
 title: "How I Lost Control and Finally Crushed the Social Media Addiction"
 date: "3 December 2025"
-image: "/images/how-i-lost-control-and-finally-crushed-social-media-addiction/main-photo.jpg"
+image: "/images/how-i-lost-control-and-finally-crushed-social-media-addiction/main-photo2.jpg"
 tags: ["Social Media Detox", "Productivity", "Time Management", "Habit Change", "Behavior Design", "Personal Experiment"]
 readingTime: "15 min to read"
 description: "A candid, step-by-step reflection on how I went from 28 hours to 0 on social media, detailing relapses, strategies, and the four powerful steps that helped me regain control over my habits."
