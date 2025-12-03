@@ -31,7 +31,7 @@ export default function BlogCard({
           alt={`${title} image`}
           fill
           priority
-          quality={40}
+          quality={80}
           className="rounded-xl object-cover"
           sizes="(max-width: 640px) 100vw, 180px"
         />
