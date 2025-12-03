@@ -57,6 +57,7 @@ Apart from service points, I have other things.
 - Counting Points—I just count in notes from 0 to N. Very good for habits I want to delete from my life because that gives me 0 benefits and takes a lot of cognitive energy from my brain.
 - Sport Points—good for habits you would like to reduce but leave in your life because they give some benefits for health and create friction.
 - Writing points—just write something like this article. 
+
 I had a lot of other tactics, but these are my favorite. 
 Honestly, it’s all about playing with friction, but the first and third options are so powerful that I decided to put them out of the step. All my efforts were focused on making good things I want to do more interesting for my brain and doing just alternative things with addiction.
 
