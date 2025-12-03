@@ -65,4 +65,4 @@ Don’t think that you can chage your life in one day, it’s a fiction.
 
 ## Aftertaste
 That is a very big win for me because several months ago I just couldn't believe that I would have 0.0h on social media, but that is just the beginning of my behavior design journey.
-Now, my main goal is maintaining the results, and I have several bad habits I want to quit, so I hope that I will win in that war. Like I always do.
+Now, my main goal is maintaining the results, and I have several bad habits I want to quit, so I hope that I will win in that war. Like I always do..
