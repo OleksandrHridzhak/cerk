@@ -21,6 +21,27 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cerk.vercel.app",
   },
+  openGraph: {
+    title: "cerk – personal tech & nature blog",
+    description: "A modern, fast, SEO-friendly Next.js blog by Oleksandr Hridzhak.",
+    url: "https://cerk.vercel.app",
+    siteName: "cerk blog",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "cerk – personal tech & nature blog",
+    description: "A modern, fast, SEO-friendly Next.js blog by Oleksandr Hridzhak.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 
