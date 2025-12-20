@@ -7,6 +7,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cerk.vercel.app/about",
   },
+  openGraph: {
+    title: "About – cerk blog",
+    description: "Learn more about the author and the goals behind the cerk personal tech & nature blog.",
+    url: "https://cerk.vercel.app/about",
+    siteName: "cerk blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "About – cerk blog",
+    description: "Learn more about the author and the goals behind the cerk personal tech & nature blog.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function AboutPage() {

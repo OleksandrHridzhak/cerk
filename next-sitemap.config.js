@@ -12,20 +12,25 @@ const nextSitemapConfig = {
   generateRobotsTxt: true,
   sitemapSize: 5000,
 
+  // Generate additional paths for all articles
+  additionalPaths: async (config) => {
+    const slugs = getAllArticleSlugs();
+    return slugs.map(slug => ({
+      loc: `/article/${slug}`,
+      lastmod: new Date().toISOString(),
+      changefreq: 'daily',
+      priority: 0.7,
+    }));
+  },
+
   transform: async (config, path) => {
-    const slugs = getAllArticleSlugs().map(slug => `/article/${slug}`);
-    const staticPages = ['/', '/about'];
-
-    if (staticPages.includes(path) || slugs.includes(path)) {
-      return {
-        loc: path,
-        lastmod: new Date().toISOString(),
-        changefreq: 'daily',
-        priority: 0.7,
-      };
-    }
-
-    return null;
+    // Include static pages with proper metadata
+    return {
+      loc: path,
+      lastmod: new Date().toISOString(),
+      changefreq: 'daily',
+      priority: path === '/' ? 1.0 : 0.7,
+    };
   },
 };
 
