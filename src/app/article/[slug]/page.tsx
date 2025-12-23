@@ -1,5 +1,6 @@
 // src/app/article/[slug]/page.tsx
 import { getArticleBySlug, getAllArticleSlugs } from '@/lib/article';
+import { parseToISODateTime } from '@/lib/date';
 import type { Metadata } from 'next';
 import NotFound from '@/app/not-found';
 import ArticlePhoto from './ArticlePhoto';
@@ -116,8 +117,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const baseUrl = 'https://cerk.vercel.app';
 
   // Parse date to ISO format for JSON-LD
-  const parsedDate = new Date(date);
-  const isoDate = !isNaN(parsedDate.getTime()) ? parsedDate.toISOString() : date;
+  const isoDate = parseToISODateTime(date);
 
   const jsonLd = {
     '@context': 'https://schema.org',

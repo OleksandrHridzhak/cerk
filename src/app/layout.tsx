@@ -64,15 +64,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
-      </head>
       <body
         className={`${dmSans.variable} ${dmSans.variable} antialiased`}
       >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <Header />
         <main>{children}</main>
       </body>

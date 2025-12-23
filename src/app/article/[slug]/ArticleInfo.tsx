@@ -1,19 +1,11 @@
 import React from 'react';
+import { parseToISODate } from '@/lib/date';
 
 type ArticleInfoProps = {
   title: string;
   date: string;
   readingTime: string;
 };
-
-function parseToISODate(dateStr: string): string {
-  // Parse dates like "23 August 2025" or "3 December 2025"
-  const date = new Date(dateStr);
-  if (isNaN(date.getTime())) {
-    return dateStr;
-  }
-  return date.toISOString().split('T')[0];
-}
 
 const ArticleInfo: React.FC<ArticleInfoProps> = ({ title, date, readingTime }) => (
   <div
