@@ -74,3 +74,16 @@ export async function getAllArticles() {
 
   return articles.filter((a): a is NonNullable<typeof a> => a !== null);
 }
+
+export async function getRandomArticles(excludeSlug: string, count: number = 3) {
+  const allArticles = await getAllArticles();
+  const filteredArticles = allArticles.filter(article => article.slug !== excludeSlug);
+  
+  // Shuffle array using Fisher-Yates algorithm
+  for (let i = filteredArticles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [filteredArticles[i], filteredArticles[j]] = [filteredArticles[j], filteredArticles[i]];
+  }
+  
+  return filteredArticles.slice(0, count);
+}
