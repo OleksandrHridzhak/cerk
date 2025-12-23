@@ -1,4 +1,5 @@
 import React from 'react';
+import { parseToISODate } from '@/lib/date';
 
 type ArticleInfoProps = {
   title: string;
@@ -24,7 +25,7 @@ const ArticleInfo: React.FC<ArticleInfoProps> = ({ title, date, readingTime }) =
       className="mt-2 text-sm md:text-md text-gray-500"
       aria-label={`Published on ${date}, estimated reading time ${readingTime}`}
     >
-      <time itemProp="datePublished" dateTime={date}>
+      <time itemProp="datePublished" dateTime={parseToISODate(date)}>
         {date}
       </time>{' '}
       • <span itemProp="timeRequired">{readingTime}</span>

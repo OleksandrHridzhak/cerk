@@ -50,11 +50,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'cerk blog',
+    url: 'https://cerk.vercel.app',
+    description: 'A modern, fast, SEO-friendly Next.js blog by Oleksandr Hridzhak.',
+    author: {
+      '@type': 'Person',
+      name: 'Oleksandr Hridzhak',
+    },
+  };
+
   return (
     <html lang="en">
       <body
         className={`${dmSans.variable} ${dmSans.variable} antialiased`}
       >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <Header />
         <main>{children}</main>
       </body>
