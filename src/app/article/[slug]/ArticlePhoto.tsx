@@ -2,15 +2,16 @@ import Image from 'next/image';
 
 interface ArticlePhotoProps {
     src: string;
+    alt: string;
 }
 
-const ArticlePhoto: React.FC<ArticlePhotoProps> = ({ src }) => {
+const ArticlePhoto: React.FC<ArticlePhotoProps> = ({ src, alt }) => {
     return (
         <div className="relative w-full h-[200px] md:h-[250px]">
 
         <Image
             src={src}
-            alt="Article main photo"
+            alt={alt}
             fill
             priority={true}
             quality={75}

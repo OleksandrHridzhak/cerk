@@ -112,11 +112,43 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     return <NotFound />;
   }
 
-  const { contentHtml, title, image, date, readingTime } = article;
+  const { contentHtml, title, image, date, readingTime, description } = article;
+  const baseUrl = 'https://cerk.vercel.app';
+
+  // Parse date to ISO format for JSON-LD
+  const parsedDate = new Date(date);
+  const isoDate = !isNaN(parsedDate.getTime()) ? parsedDate.toISOString() : date;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: description || `Read ${title} on cerk blog`,
+    image: image ? `${baseUrl}${image}` : undefined,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    author: {
+      '@type': 'Person',
+      name: 'Oleksandr Hridzhak',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'cerk blog',
+      url: baseUrl,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${baseUrl}/article/${slug}`,
+    },
+  };
 
   return (
     <>
-      <ArticlePhoto src={image} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ArticlePhoto src={image} alt={title} />
       <ArticleInfo title={title} date={date} readingTime={readingTime} />
       <ArticleBody content={contentHtml} />
     </>
