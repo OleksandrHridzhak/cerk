@@ -1,10 +1,11 @@
 // src/app/article/[slug]/page.tsx
-import { getArticleBySlug, getAllArticleSlugs } from '@/lib/article';
+import { getArticleBySlug, getAllArticleSlugs, getRandomArticles } from '@/lib/article';
 import type { Metadata } from 'next';
 import NotFound from '@/app/not-found';
 import ArticlePhoto from './ArticlePhoto';
 import ArticleInfo from './ArticleInfo';
 import ArticleBody from './ArticleBody';
+import RelatedArticles from './RelatedArticles';
 
 
 export async function generateStaticParams() {
@@ -113,12 +114,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   }
 
   const { contentHtml, title, image, date, readingTime } = article;
+  const relatedArticles = await getRandomArticles(slug, 3);
 
   return (
     <>
       <ArticlePhoto src={image} />
       <ArticleInfo title={title} date={date} readingTime={readingTime} />
       <ArticleBody content={contentHtml} />
+      <RelatedArticles articles={relatedArticles} />
     </>
   );
 }
