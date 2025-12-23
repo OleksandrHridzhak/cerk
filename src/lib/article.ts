@@ -5,6 +5,27 @@ import { marked } from 'marked';
 
 const articlesDirectory = path.join(process.cwd(), 'content/articles');
 
+// Escape HTML special characters to prevent XSS
+function escapeHtml(text: string | null): string {
+  if (!text) return '';
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// Custom renderer to add lazy loading to images
+const renderer = new marked.Renderer();
+renderer.image = function({ href, title, text }) {
+  const safeHref = escapeHtml(href);
+  const safeAlt = escapeHtml(text);
+  const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
+  return `<img src="${safeHref}" alt="${safeAlt}"${titleAttr} loading="lazy">`;
+};
+marked.use({ renderer });
+
 export function getAllArticleSlugs() {
   return fs.readdirSync(articlesDirectory).map(file => file.replace(/\.md$/, ''));
 }
