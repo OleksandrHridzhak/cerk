@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About – cerk blog",
   description: "Learn more about the author and the goals behind the cerk personal tech & nature blog.",
+  authors: [{ name: "Oleksandr Hridzhak" }],
+  creator: "Oleksandr Hridzhak",
   alternates: {
     canonical: "https://cerk.vercel.app/about",
   },
