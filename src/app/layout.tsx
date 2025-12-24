@@ -15,6 +15,8 @@ import Header from "@/components/Header/Header";
 export const metadata: Metadata = {
   title: "cerk – personal tech & nature blog",
   description: "A modern, fast, SEO-friendly Next.js blog by Oleksandr Hridzhak.",
+  authors: [{ name: "Oleksandr Hridzhak" }],
+  creator: "Oleksandr Hridzhak",
   verification: {
     google: 'KDpigy36G4cK_CqL5s_V-xsN_r8COprfhH2ekYi-_IY',
   },

@@ -27,6 +27,8 @@ export async function generateMetadata({
   const defaultMetadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
+    authors: [{ name: 'Oleksandr Hridzhak' }],
+    creator: 'Oleksandr Hridzhak',
     verification: {
       google: 'KDpigy36G4cK_CqL5s_V-xsN_r8COprfhH2ekYi-_IY',
     },
@@ -64,6 +66,8 @@ export async function generateMetadata({
     return {
       title,
       description,
+      authors: [{ name: 'Oleksandr Hridzhak' }],
+      creator: 'Oleksandr Hridzhak',
       verification: {
         google: 'KDpigy36G4cK_CqL5s_V-xsN_r8COprfhH2ekYi-_IY',
       },
