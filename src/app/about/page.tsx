@@ -4,8 +4,26 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About – cerk blog",
   description: "Learn more about the author and the goals behind the cerk personal tech & nature blog.",
+  authors: [{ name: "Oleksandr Hridzhak" }],
+  creator: "Oleksandr Hridzhak",
   alternates: {
     canonical: "https://cerk.vercel.app/about",
+  },
+  openGraph: {
+    title: "About – cerk blog",
+    description: "Learn more about the author and the goals behind the cerk personal tech & nature blog.",
+    url: "https://cerk.vercel.app/about",
+    siteName: "cerk blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "About – cerk blog",
+    description: "Learn more about the author and the goals behind the cerk personal tech & nature blog.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

@@ -1,10 +1,11 @@
 // src/app/article/[slug]/page.tsx
-import { getArticleBySlug, getAllArticleSlugs } from '@/lib/article';
+import { getArticleBySlug, getAllArticleSlugs, getRandomArticles } from '@/lib/article';
 import type { Metadata } from 'next';
 import NotFound from '@/app/not-found';
 import ArticlePhoto from './ArticlePhoto';
 import ArticleInfo from './ArticleInfo';
 import ArticleBody from './ArticleBody';
+import RelatedArticles from './RelatedArticles';
 
 
 export async function generateStaticParams() {
@@ -18,33 +19,88 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params; 
-  console.log('Slug:', slug);
 
   const baseUrl = 'https://cerk.vercel.app';
-  const defaultMetadata = {
-    title: 'cerk – personal tech & nature blog',
-    description: 'A modern, fast, SEO-friendly Next.js blog by Oleksandr Hridzhak.',
+  const defaultTitle = 'cerk – personal tech & nature blog';
+  const defaultDescription = 'A modern, fast, SEO-friendly Next.js blog by Oleksandr Hridzhak.';
+  
+  const defaultMetadata: Metadata = {
+    title: defaultTitle,
+    description: defaultDescription,
+    authors: [{ name: 'Oleksandr Hridzhak' }],
+    creator: 'Oleksandr Hridzhak',
     verification: {
       google: 'KDpigy36G4cK_CqL5s_V-xsN_r8COprfhH2ekYi-_IY',
     },
     alternates: {
       canonical: `${baseUrl}/article/${slug}`,
     },
+    openGraph: {
+      title: defaultTitle,
+      description: defaultDescription,
+      url: `${baseUrl}/article/${slug}`,
+      siteName: 'cerk blog',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: defaultTitle,
+      description: defaultDescription,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 
   try {
     const article = await getArticleBySlug(slug);
     if (!article) {
-      console.log('Article not found for slug:', slug);
       return defaultMetadata;
     }
 
+    const title = `${article.title} – cerk blog`;
+    const description = article.description || defaultDescription;
+    const imageUrl = article.image ? `${baseUrl}${article.image}` : undefined;
+
     return {
-      title: `${article.title} – cerk blog`,
-      description: article.description || defaultMetadata.description,
-      verification: defaultMetadata.verification,
+      title,
+      description,
+      authors: [{ name: 'Oleksandr Hridzhak' }],
+      creator: 'Oleksandr Hridzhak',
+      verification: {
+        google: 'KDpigy36G4cK_CqL5s_V-xsN_r8COprfhH2ekYi-_IY',
+      },
       alternates: {
         canonical: `${baseUrl}/article/${slug}`,
+      },
+      openGraph: {
+        title,
+        description,
+        url: `${baseUrl}/article/${slug}`,
+        siteName: 'cerk blog',
+        type: 'article',
+        publishedTime: article.date,
+        ...(imageUrl && {
+          images: [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: article.title,
+            },
+          ],
+        }),
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        ...(imageUrl && { images: [imageUrl] }),
+      },
+      robots: {
+        index: true,
+        follow: true,
       },
     };
   } catch (error) {
@@ -62,12 +118,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   }
 
   const { contentHtml, title, image, date, readingTime } = article;
+  const relatedArticles = await getRandomArticles(slug, 3);
 
   return (
     <>
       <ArticlePhoto src={image} />
       <ArticleInfo title={title} date={date} readingTime={readingTime} />
       <ArticleBody content={contentHtml} />
+      <RelatedArticles articles={relatedArticles} />
     </>
   );
 }
