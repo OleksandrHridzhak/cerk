@@ -2,7 +2,7 @@
 title: "Social Media 0h: How I Took Back My Life"
 date: "3 December 2025"
 image: "/images/how-i-lost-control-and-finally-crushed-social-media-addiction/graphic-of-time-on-social-en.png"
-tags: ["Social Media Detox", "Productivity", "Time Management", "Habit Change", "Behavior Design", "Personal Experiment"]
+tags: ["Health", "Lifestyle", "Social Media Detox", "Productivity"]
 readingTime: "15 min to read"
 description: "A candid, step-by-step reflection on how I went from 28 hours to 0 on social media, detailing relapses, strategies, and the four powerful steps that helped me regain control over my habits."
 ---

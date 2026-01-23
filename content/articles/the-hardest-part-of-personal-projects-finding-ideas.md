@@ -2,7 +2,7 @@
 title: "The Hardest Part of Personal Projects: Finding Ideas"
 date: "21 August 2025"
 image: "/images/the-hardest-part-of-personal-projects-finding-ideas/background.jpg"
-tags: ["Personal Projects", "Creativity", "Programming", "Motivation"]
+tags: ["Tech", "Education", "Creativity", "Personal Projects"]
 readingTime: "5 min to read"
 description: "Why finding ideas for side projects is harder than coding them, and how pet projects like Onda and Cerk taught me the value of building tools I actually use."
 ---

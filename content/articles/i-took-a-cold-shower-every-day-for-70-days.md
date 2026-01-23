@@ -2,7 +2,7 @@
 title: "I Took a Cold Shower Every Day (almost) for 70 Days. Here is Why I don't want Going Back"
 date: "7 January 2026"
 image: "/images/i-took-a-cold-shower-every-day-for-70-days/main-photo.jpg"
-tags: ["Self-Improvement", "Cold Shower", "Habits", "Dopamine", "Psychology"]
+tags: ["Health", "Lifestyle", "Self-Improvement", "Habits"]
 readingTime: "7 min to read"
 description: "70 days of cold showers transformed my daily routine. Discover why I'm never going back to hot water and the science behind dopamine spikes from cold exposure."
 ---

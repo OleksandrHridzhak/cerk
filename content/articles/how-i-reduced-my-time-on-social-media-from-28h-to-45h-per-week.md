@@ -2,7 +2,7 @@
 title: "How I Reduced My Time on Social Media from 28h to 4.5h per Week"
 date: "9 September 2025"
 image: "/images/how-i-reduced-my-time-on-social-media-from-28h-to-45h-per-week/main-photo.jpg"
-tags: ["Social Media Detox", "Productivity", "Time Management", "Habit Change", "Personal Experiment"]
+tags: ["Health", "Lifestyle", "Productivity", "Social Media Detox"]
 readingTime: "11 min to read"
 description: "Step-by-step reflection on how I decreased my weekly social media usage from 28 hours to just 4.5 hours using control, freedom, and disgust techniques."
 ---

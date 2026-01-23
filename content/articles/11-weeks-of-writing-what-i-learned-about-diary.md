@@ -2,7 +2,7 @@
 title: "11 Weeks of Writing: What I Learned About Diary"
 date: "23 August 2025"
 image: "/images/11-weeks-of-writing-what-i-learned-about-diary/main-photo2.jpg"
-tags: ["Self-Improvement", "Diary", "Writing", "Psychology"]
+tags: ["Education", "Lifestyle", "Writing", "Self-Improvement"]
 readingTime: "8 min to read"
 description: "Reflections on starting a diary inspired by Matthew McConaughey's 'Greenlights' and the surprising benefits of expressive writing backed by science."
 ---
