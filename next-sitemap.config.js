@@ -11,6 +11,7 @@ const nextSitemapConfig = {
   siteUrl: 'https://cerk.vercel.app',
   generateRobotsTxt: true,
   sitemapSize: 5000,
+  exclude: ['/src/pages/*'],
 
   // Generate additional paths for all articles
   additionalPaths: async (config) => {
